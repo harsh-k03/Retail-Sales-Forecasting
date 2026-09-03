@@ -1,0 +1,56 @@
+{
+  "passed": true,
+  "n_rows": 14600,
+  "n_columns": 10,
+  "issues": [],
+  "summary": {
+    "rows": 14600,
+    "columns": [
+      "date",
+      "store",
+      "product",
+      "sales",
+      "promotion",
+      "holiday",
+      "region",
+      "category",
+      "temperature",
+      "inventory"
+    ],
+    "optional_present": [
+      "promotion",
+      "holiday",
+      "region",
+      "category",
+      "temperature",
+      "inventory"
+    ],
+    "missing_by_column": {
+      "date": 0,
+      "store": 0,
+      "product": 0,
+      "sales": 0,
+      "promotion": 0,
+      "holiday": 0,
+      "region": 0,
+      "category": 0,
+      "temperature": 0,
+      "inventory": 0
+    },
+    "date_min": "2021-01-01",
+    "date_max": "2022-12-31",
+    "n_days": 730,
+    "n_stores": 5,
+    "n_products": 4,
+    "target": {
+      "mean": 340.8169066438356,
+      "std": 207.03810088431567,
+      "min": 0.0,
+      "max": 1543.667,
+      "zero_ratio": 0.004589041095890411
+    }
+  },
+  "created_at": "2026-09-03T15:55:22.928508",
+  "n_errors": 0,
+  "n_warnings": 0
+}
