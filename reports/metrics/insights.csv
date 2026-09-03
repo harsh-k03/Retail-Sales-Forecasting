@@ -1,0 +1,8 @@
+priority,category,title,detail,action
+medium,promotion,Promotions lift sales 20.5%,"Measured across 2,024 promoted rows (13.9% of days).",Concentrate promo budget on the highest-uplift product families and peak weekdays.
+medium,staffing,Saturday runs 55% above Tuesday,Average sales 444 vs 287.,Move shift hours from Tuesday to Saturday.
+medium,seasonality,May is the seasonal peak,Averages +15.1% above the typical month.,Lock in supplier capacity and seasonal hiring ~6 weeks before May.
+low,demand,Demand is flat,Next 30 days track within +1.4% of the last 30 days.,Hold current inventory and staffing plans.
+low,assortment,Bottom 1 products contribute 11.4% of sales,The long tail ties up shelf space and working capital.,Review the tail for delisting or reduced facings at low-volume stores.
+low,data_quality,1 anomalous days in the last 90 days,"Largest is 2022-12-31 (spike, z=3.2).","Confirm these are real events (closures, stockouts) before trusting the forecast there."
+low,model,Top forecast drivers,"The model leans hardest on sales_roll28_mean, sales_lag_7, sales_lag_14.",Keep these inputs clean and available at forecast time; they carry most of the signal.

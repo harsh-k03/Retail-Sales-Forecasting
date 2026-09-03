@@ -1,0 +1,109 @@
+{
+  "dataset": {
+    "rows": 14600,
+    "columns": [
+      "date",
+      "store",
+      "product",
+      "sales",
+      "promotion",
+      "holiday",
+      "region",
+      "category",
+      "temperature",
+      "inventory"
+    ],
+    "optional_present": [
+      "promotion",
+      "holiday",
+      "region",
+      "category",
+      "temperature",
+      "inventory"
+    ],
+    "missing_by_column": {
+      "date": 0,
+      "store": 0,
+      "product": 0,
+      "sales": 0,
+      "promotion": 0,
+      "holiday": 0,
+      "region": 0,
+      "category": 0,
+      "temperature": 0,
+      "inventory": 0
+    },
+    "date_min": "2021-01-01",
+    "date_max": "2022-12-31",
+    "n_days": 730,
+    "n_stores": 5,
+    "n_products": 4,
+    "target": {
+      "mean": 340.8169066438356,
+      "std": 207.03810088431567,
+      "min": 0.0,
+      "max": 1543.667,
+      "zero_ratio": 0.004589041095890411
+    }
+  },
+  "cleaning": {
+    "dropped_invalid_dates": 0,
+    "dropped_duplicates": 0,
+    "missing_target": 0,
+    "clipped_negatives": 0,
+    "outliers": 17,
+    "filled_exogenous": 0
+  },
+  "kpis": {
+    "total_sales": 4975126.55525,
+    "avg_daily_sales": 6815.241856506849,
+    "median_daily_sales": 6584.049999999999,
+    "peak_daily_sales": 12739.215,
+    "n_stores": 5,
+    "n_products": 4,
+    "n_days": 730,
+    "mom_growth_pct": 11.613168759083647,
+    "zero_sales_ratio": 0.004589041095890411
+  },
+  "best_model": "prophet",
+  "metrics": {
+    "rmse": 47.49908255263395,
+    "mae": 27.99572021777532,
+    "mape": 8.389327791492985,
+    "smape": 9.2698133968061,
+    "r2": 0.9359762530479837,
+    "bias": -0.5250221295963748,
+    "fold": 1.5,
+    "rmse_std": 9.305213820285925,
+    "mae_std": 0.969970339784444,
+    "mape_std": 0.3355918477041716,
+    "smape_std": 0.5752747852677768,
+    "r2_std": 0.028411344659187036,
+    "bias_std": 4.149586825713078,
+    "fold_std": 1.118033988749895
+  },
+  "forecast": {
+    "horizon_days": 30,
+    "total_forecast": 214694.72172907047,
+    "avg_daily_forecast": 7156.490724302349,
+    "recent_actual_total": 211653.55075,
+    "change_vs_recent_pct": 1.4368627260416877
+  },
+  "explained_model": "catboost",
+  "n_features": 60,
+  "figures": {
+    "trend": "reports/figures/trend.png",
+    "seasonality": "reports/figures/seasonality.png",
+    "distribution": "reports/figures/distribution.png",
+    "store_month_heatmap": "reports/figures/store_month_heatmap.png",
+    "product_performance": "reports/figures/product_performance.png",
+    "shap_importance": "reports/figures/shap_importance.png",
+    "shap_summary": "reports/figures/shap_summary.png",
+    "shap_waterfall": "reports/figures/shap_waterfall.png",
+    "shap_dependence_sales_roll28_mean": "reports/figures/shap_dependence_sales_roll28_mean.png",
+    "shap_dependence_sales_lag_7": "reports/figures/shap_dependence_sales_lag_7.png",
+    "shap_dependence_sales_lag_14": "reports/figures/shap_dependence_sales_lag_14.png",
+    "forecast": "reports/figures/forecast.png",
+    "model_comparison": "reports/figures/model_comparison.png"
+  }
+}
