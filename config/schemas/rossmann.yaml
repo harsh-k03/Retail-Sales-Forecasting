@@ -1,0 +1,14 @@
+# Kaggle "Rossmann Store Sales". No product dimension -> constant.
+name: rossmann
+description: Kaggle Rossmann Store Sales.
+kaggle: competitions/rossmann-store-sales
+main_file: train.csv
+columns:
+  date: Date
+  store: Store
+  sales: Sales
+  promotion: Promo
+  holiday: StateHoliday
+  inventory: Customers
+constants:
+  product: ALL

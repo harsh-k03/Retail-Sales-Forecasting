@@ -1,0 +1,15 @@
+# Kaggle "Walmart Recruiting - Store Sales Forecasting" (weekly).
+name: walmart
+description: Kaggle Walmart Store Sales (weekly granularity).
+kaggle: competitions/walmart-recruiting-store-sales-forecasting
+main_file: train.csv
+columns:
+  date: Date
+  store: Store
+  product: Dept
+  sales: Weekly_Sales
+  holiday: IsHoliday
+  temperature: Temperature
+  marketing_spend: MarkDown1
+  region: Type
+constants: {}

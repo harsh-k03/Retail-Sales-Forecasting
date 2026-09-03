@@ -1,0 +1,95 @@
+# Central project configuration. All modules read paths/params from here.
+project:
+  name: retail-sales-forecasting
+  version: "1.0.0"
+  random_seed: 42
+
+paths:
+  data_raw: data/raw
+  data_interim: data/interim
+  data_processed: data/processed
+  data_sample: data/sample
+  models: models
+  reports: reports
+  figures: reports/figures
+  metrics: reports/metrics
+  validation: reports/validation
+  logs: logs
+
+data:
+  # Active dataset preset in config/schemas/<name>.yaml
+  schema_preset: favorita
+  sample_file: data/sample/sample_store_sales.csv
+  date_format: null          # null -> pandas inference
+  frequency: D               # target series frequency
+
+validation:
+  max_missing_target_ratio: 0.05
+  max_duplicate_ratio: 0.01
+  allow_negative_sales: false
+  min_rows: 100
+  min_date: "2000-01-01"
+  max_future_days: 0         # rows dated beyond today + N are flagged
+
+cleaning:
+  drop_duplicates: true
+  clip_negative_sales: true
+  fill_missing_target: interpolate   # drop | zero | interpolate
+  outlier_method: iqr                # none | iqr | zscore
+  outlier_factor: 3.0
+  outlier_action: clip               # clip | flag | drop
+
+features:
+  lags: [1, 7, 14, 28]
+  rolling_windows: [7, 14, 28]
+  rolling_stats: [mean, std, min, max]
+  add_calendar: true
+  add_fourier: true
+  fourier_periods: [7, 365.25]
+  fourier_order: 3
+  add_promo_interactions: true
+  target_transform: none             # none | log1p
+
+split:
+  strategy: walk_forward             # walk_forward | timeseries_split
+  n_splits: 4
+  test_size_days: 30
+  gap_days: 0
+
+training:
+  target: sales
+  models: [naive, random_forest, xgboost, lightgbm, catboost, prophet]
+  primary_metric: rmse
+  categorical_encoding: ordinal
+
+tuning:
+  enabled: false
+  n_trials: 25
+  timeout: 600
+  models: [lightgbm, xgboost]
+
+forecast:
+  horizons: [7, 30, 90]
+  default_horizon: 30
+
+explain:
+  enabled: true
+  max_samples: 2000
+  top_features: 20
+
+api:
+  host: 0.0.0.0
+  port: 8000
+  max_upload_mb: 50
+  history_size: 100
+
+dashboard:
+  host: 0.0.0.0
+  port: 8501
+  theme: light
+
+logging:
+  level: INFO
+  file: logs/app.log
+  max_bytes: 5242880
+  backup_count: 3

@@ -1,0 +1,34 @@
+# Kaggle "Store Sales - Time Series Forecasting" (Corporacion Favorita).
+# train.csv: id,date,store_nbr,family,sales,onpromotion
+# Enrich train.csv with stores.csv / transactions.csv / oil.csv / holidays_events.csv
+# before loading (scripts/prepare_kaggle.py does this).
+name: favorita
+description: Kaggle Store Sales - Time Series Forecasting.
+kaggle: competitions/store-sales-time-series-forecasting
+main_file: train.csv
+columns:
+  date: date
+  store: store_nbr
+  product: family
+  sales: sales
+  promotion: onpromotion
+  holiday: is_holiday
+  region: state
+  category: cluster
+  temperature: temperature
+  inventory: transactions
+  marketing_spend: null
+constants: {}
+joins:
+  - file: stores.csv
+    on: store_nbr
+    keep: [city, state, type, cluster]
+  - file: transactions.csv
+    on: [date, store_nbr]
+    keep: [transactions]
+  - file: oil.csv
+    on: date
+    keep: [dcoilwtico]
+  - file: holidays_events.csv
+    on: date
+    keep: [type, locale]

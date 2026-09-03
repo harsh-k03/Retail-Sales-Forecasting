@@ -1,24 +1,40 @@
-.venv/
+# Python
 __pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
 .ipynb_checkpoints/
 
-*.pyc
-*.pyo
-
+# Environment
 .env
+.env.*
 
-models/*.pkl
-models/*.joblib
+# Tooling
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.vscode/
+.idea/
+.DS_Store
 
+# Logs
+logs/
+*.log
+
+# Data: raw and derived data stays local, the sample is versioned
 data/raw/*
 !data/raw/.gitkeep
-
+data/interim/*
+!data/interim/.gitkeep
 data/processed/*
 !data/processed/.gitkeep
 
-reports/*
-!reports/.gitkeep
+# Models: binaries are rebuilt by the pipeline
+models/*
+!models/.gitkeep
 
-.vscode/
-
-.DS_Store
+# Reports: figures and metrics are committed, per-model prediction dumps are not
+reports/metrics/predictions_*.csv
+reports/metrics/forecast_*.csv

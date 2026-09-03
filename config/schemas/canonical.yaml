@@ -1,0 +1,16 @@
+# Identity preset: file already uses the canonical column names.
+name: canonical
+description: Data already in the canonical schema.
+columns:
+  date: date
+  store: store
+  product: product
+  sales: sales
+  promotion: promotion
+  holiday: holiday
+  region: region
+  category: category
+  temperature: temperature
+  inventory: inventory
+  marketing_spend: marketing_spend
+constants: {}
