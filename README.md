@@ -224,3 +224,5 @@ insight generation, API contracts and dashboard page smoke tests.
 ## 📄 License
 
 MIT — see [LICENSE](LICENSE).
+
+Maintained by [Harsh](https://github.com/harsh-k03).
