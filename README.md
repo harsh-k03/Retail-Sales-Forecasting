@@ -1,5 +1,6 @@
 # 📈 Retail Sales Forecasting & Business Intelligence
 
+[![Live demo](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://retail-sales-forecasting03.streamlit.app/)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![CI](https://github.com/harsh-k03/Retail-Sales-Forecasting/actions/workflows/ci.yml/badge.svg)](https://github.com/harsh-k03/Retail-Sales-Forecasting/actions/workflows/ci.yml)
 [![Streamlit](https://img.shields.io/badge/Streamlit-dashboard-FF4B4B?logo=streamlit&logoColor=white)](https://streamlit.io/)
@@ -10,6 +11,8 @@
 An end-to-end demand forecasting platform: **data validation → feature engineering → walk-forward
 model comparison → SHAP explanations → recursive forecasts → business recommendations**, served
 through a Streamlit dashboard and a FastAPI service.
+
+🔗 **Live demo:** https://retail-sales-forecasting03.streamlit.app/
 
 <p align="left">
   <img src="https://skillicons.dev/icons?i=python,sklearn,fastapi,docker,git,githubactions" />
@@ -160,11 +163,37 @@ The full reasoning, including the trade-offs each choice costs, is in
 
 ## 🖥️ Dashboard
 
+Try it live: **[retail-sales-forecasting03.streamlit.app](https://retail-sales-forecasting03.streamlit.app/)**
+
 `Home` · `Upload` · `Validation` · `EDA` · `Features` · `Models` · `Forecast` · `Explainability`
 · `Insights` · `Scenario Analysis` · `Settings`
 
 Upload a CSV, watch it validate, explore it, train and compare models, forecast, explain the
 drivers, read the recommendations, then pull scenario levers and see the forecast move.
+
+### 📸 Screenshots
+
+| Home | Validation |
+|---|---|
+| ![Home](docs/screenshots/01_home.png) | ![Validation](docs/screenshots/03_validation.png) |
+
+| Exploratory analysis | Feature engineering |
+|---|---|
+| ![EDA](docs/screenshots/04_eda.png) | ![Features](docs/screenshots/05_features.png) |
+
+| Model comparison | Forecast |
+|---|---|
+| ![Models](docs/screenshots/06_models.png) | ![Forecast](docs/screenshots/07_forecast.png) |
+
+| Explainability (SHAP) | Business insights |
+|---|---|
+| ![Explainability](docs/screenshots/08_explainability.png) | ![Insights](docs/screenshots/09_insights.png) |
+
+| Scenario analysis | REST API (Swagger) |
+|---|---|
+| ![Scenario analysis](docs/screenshots/10_scenario_analysis.png) | ![API docs](docs/screenshots/11_api_docs.png) |
+
+More: [Upload](docs/screenshots/02_upload.png) · [Settings](docs/screenshots/12_settings.png)
 
 ## 🔌 API
 
