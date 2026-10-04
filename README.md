@@ -166,6 +166,30 @@ The full reasoning, including the trade-offs each choice costs, is in
 Upload a CSV, watch it validate, explore it, train and compare models, forecast, explain the
 drivers, read the recommendations, then pull scenario levers and see the forecast move.
 
+### 📸 Screenshots
+
+| Home | Validation |
+|---|---|
+| ![Home](docs/screenshots/01_home.png) | ![Validation](docs/screenshots/03_validation.png) |
+
+| Exploratory analysis | Feature engineering |
+|---|---|
+| ![EDA](docs/screenshots/04_eda.png) | ![Features](docs/screenshots/05_features.png) |
+
+| Model comparison | Forecast |
+|---|---|
+| ![Models](docs/screenshots/06_models.png) | ![Forecast](docs/screenshots/07_forecast.png) |
+
+| Explainability (SHAP) | Business insights |
+|---|---|
+| ![Explainability](docs/screenshots/08_explainability.png) | ![Insights](docs/screenshots/09_insights.png) |
+
+| Scenario analysis | REST API (Swagger) |
+|---|---|
+| ![Scenario analysis](docs/screenshots/10_scenario_analysis.png) | ![API docs](docs/screenshots/11_api_docs.png) |
+
+More: [Upload](docs/screenshots/02_upload.png) · [Settings](docs/screenshots/12_settings.png)
+
 ## 🔌 API
 
 | Method | Endpoint | Purpose |
